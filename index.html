@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!--モダンブラウザに向けた<model-viewer>のロード-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+
+    <!--IE11のような古いブラウザに向けた<model-viewer>のロード-->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <title>WebAR Sample for All Browsers</title>
+
+    <style>    
+        h1 {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .wrapper {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .ar-model {
+            margin: 0 auto;
+            max-width: 600px;
+            height: 400px;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>   
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>WebAR Sample using &lt;model-viewer&gt;</h1>
+        <figure>
+            <model-viewer class="ar-model" poster="img/earth.gif" src="img/earth_ball.gltf" ios-src="img/earth_ball.usdz" auto-rotate camera-controls ar alt="地球"></model-viewer>       
+        </figure>      
+    </div>
+</body>
+
+</html>
